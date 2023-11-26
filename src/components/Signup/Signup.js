@@ -20,7 +20,6 @@ export default function Signup({ setisLogedIn }) {
 
 
   const handleInputChange = (fieldName, value) => {
-    debugger;
     if(fieldName==='username'){
         const nameParts = value.split(' ');
 
@@ -73,12 +72,9 @@ export default function Signup({ setisLogedIn }) {
   
       console.log(response);
 
-      if(response.data.user_type==="end_consumer"){
-        alert("succesfully registered,please login again");
-      }
   
       // Check the response status and handle accordingly
-      if (response.status === 200) {
+      if (response.data != undefined ) {
         // Assuming a successful response means the user is logged in
         setisLogedIn(true);
       } else {
