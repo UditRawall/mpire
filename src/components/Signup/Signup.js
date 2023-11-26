@@ -64,7 +64,7 @@ export default function Signup({ setisLogedIn }) {
   const signUpHandler = async (e) => {
     e.preventDefault();
     try {
-      debugger;
+      
       const response = await axios.post(
         "http://mpirebackend.eba-cnyr2zti.ap-south-1.elasticbeanstalk.com/register",
         formData
