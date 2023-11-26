@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./Login.css";
 import Input from "../Input/Inputs";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Login = ({ setisLogedIn }) => {
   const navigate = useNavigate();

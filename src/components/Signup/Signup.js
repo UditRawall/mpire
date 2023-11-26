@@ -59,7 +59,7 @@ export default function Signup({ setisLogedIn }) {
   //     setisLogedIn(true);
   //   }
 
-  const [agreedToTerms, setAgreedToTerms] = useState(false);
+  // const [agreedToTerms, setAgreedToTerms] = useState(false);
 
   const signUpHandler = async (e) => {
     e.preventDefault();
@@ -74,7 +74,7 @@ export default function Signup({ setisLogedIn }) {
 
   
       // Check the response status and handle accordingly
-      if (response.data != undefined ) {
+      if (response.data !==undefined ) {
         // Assuming a successful response means the user is logged in
         setisLogedIn(true);
       } else {
