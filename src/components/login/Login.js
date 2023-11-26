@@ -29,6 +29,7 @@ const Login = ({ setisLogedIn }) => {
       ...formData,
       password: newPassword,
     });
+    setShowPassword("")
   };
 
   const directToSignup = () => {
