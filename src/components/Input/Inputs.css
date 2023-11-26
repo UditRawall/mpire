@@ -1,0 +1,50 @@
+.inputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 5px 0px;
+    
+  }
+  
+  .input-fields input {
+    border: 2px solid #fff;
+    background: transparent;
+    width:23rem; /* Make the width 100% of the parent container */
+    max-width: 23rem; 
+    height: 3rem;
+    padding-left: 20px;
+    padding-right: 30px;
+    color: #fff;
+    box-sizing: border-box;
+  }
+  
+  .inputs-left {
+    width: 205px;
+    display: flex;
+  }
+  
+  .inputs-left span {
+    color: #fff;
+    text-align: center;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    
+  }
+  
+  .input::placeholder {
+    color: #fff;
+    font-size: 30px;
+    font-weight: 500;
+  }
+
+ 
+
+  @media screen and (375px <= width <= 600px ) {
+    .input-fields input{
+      width: 16rem;
+    }
+    
+  }
