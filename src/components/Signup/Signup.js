@@ -69,7 +69,7 @@ export default function Signup({ setisLogedIn }) {
     try {
       
       const response = await axios.post(
-        "https://mpirebackend.eba-cnyr2zti.ap-south-1.elasticbeanstalk.com/register",
+        "http://mpirebackend.eba-cnyr2zti.ap-south-1.elasticbeanstalk.com/register",
         formData
       );
   

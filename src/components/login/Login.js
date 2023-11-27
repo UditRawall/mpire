@@ -42,7 +42,7 @@ const Login = ({ setisLogedIn }) => {
   async function loginsubmitHandler() {
     try {
       
-      const response = await axios.post('https://mpirebackend.eba-cnyr2zti.ap-south-1.elasticbeanstalk.com/login', {
+      const response = await axios.post('http://mpirebackend.eba-cnyr2zti.ap-south-1.elasticbeanstalk.com/login', {
         email: formData.email,
         password: formData.password
       });
