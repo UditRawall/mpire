@@ -60,14 +60,16 @@ export default function Signup({ setisLogedIn }) {
   //   }
 
   // const [agreedToTerms, setAgreedToTerms] = useState(false);
+  const formHandler = (event)=>{
+    event.preventDefault();
+  };
 
   const signUpHandler = async (e) => {
-    
-    e.preventDefault();
+    debugger;
     try {
       
       const response = await axios.post(
-        "http://mpirebackend.eba-cnyr2zti.ap-south-1.elasticbeanstalk.com/register",
+        "https://mpirebackend.eba-cnyr2zti.ap-south-1.elasticbeanstalk.com/register",
         formData
       );
   
@@ -122,7 +124,7 @@ export default function Signup({ setisLogedIn }) {
         </button>
         <div className="Line"></div>
 
-        <form className="signup-form" onSubmit={signUpHandler}>
+        <form className="signup-form" onSubmit={formHandler}>
           <Input
             alt="username"
             type="text"

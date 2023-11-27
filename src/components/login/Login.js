@@ -41,8 +41,8 @@ const Login = ({ setisLogedIn }) => {
   }
   async function loginsubmitHandler() {
     try {
-      debugger;
-      const response = await axios.post('http://mpirebackend.eba-cnyr2zti.ap-south-1.elasticbeanstalk.com/login', {
+      
+      const response = await axios.post('https://mpirebackend.eba-cnyr2zti.ap-south-1.elasticbeanstalk.com/login', {
         email: formData.email,
         password: formData.password
       });
@@ -51,6 +51,7 @@ const Login = ({ setisLogedIn }) => {
       localStorage.setItem('username',response.data.user.username);
       localStorage.setItem('first_name',response.data.user.first_name);
       localStorage.setItem('last_name',response.data.user.last_name);
+
       if(!isLoggedIn){
         navigate('/Login');
         
@@ -59,7 +60,7 @@ const Login = ({ setisLogedIn }) => {
       console.log('Response:', response.data);
       // return response.data;
     } catch (error) {
-      debugger;
+     
       if(error.response.data.error==="User Not Found"){
         directToSignup();
       }
