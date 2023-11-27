@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./Login.css";
 import Input from "../Input/Inputs";
-import {Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import toast, { Toaster } from 'react-hot-toast';
 
 const Login = ({ setisLogedIn }) => {
   const navigate = useNavigate();
@@ -52,7 +53,7 @@ const Login = ({ setisLogedIn }) => {
       localStorage.setItem('first_name',response.data.user.first_name);
       localStorage.setItem('last_name',response.data.user.last_name);
       if(!isLoggedIn){
-
+        toast.success('Successfully toasted!')
         navigate('/Login');
         
       }

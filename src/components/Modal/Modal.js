@@ -9,6 +9,7 @@ export default function Modal () {
         setModal(!modal);
     }
     return <>
+    
     <button className="btn-modal" onClick={toggleClick}>open</button>
         
     {modal && (
