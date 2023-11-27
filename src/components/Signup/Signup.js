@@ -62,6 +62,7 @@ export default function Signup({ setisLogedIn }) {
   // const [agreedToTerms, setAgreedToTerms] = useState(false);
 
   const signUpHandler = async (e) => {
+    
     e.preventDefault();
     try {
       
@@ -71,6 +72,7 @@ export default function Signup({ setisLogedIn }) {
       );
   
       console.log(response);
+
 
   
       // Check the response status and handle accordingly

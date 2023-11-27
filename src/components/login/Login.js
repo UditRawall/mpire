@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./Login.css";
 import Input from "../Input/Inputs";
-import { useNavigate } from "react-router-dom";
+import {Link, useNavigate } from "react-router-dom";
 
 const Login = ({ setisLogedIn }) => {
   const navigate = useNavigate();
@@ -48,7 +48,11 @@ const Login = ({ setisLogedIn }) => {
       });
 
       const isLoggedIn = response.data.user.is_emailverified;
+      localStorage.setItem('username',response.data.user.username);
+      localStorage.setItem('first_name',response.data.user.first_name);
+      localStorage.setItem('last_name',response.data.user.last_name);
       if(!isLoggedIn){
+
         navigate('/Login');
         
       }
@@ -58,7 +62,6 @@ const Login = ({ setisLogedIn }) => {
     } catch (error) {
       debugger;
       if(error.response.data.error==="User Not Found"){
-        alert("user not found");
         directToSignup();
       }
       // Handle errors
